@@ -55,8 +55,8 @@ I am going to use the required technologies in the following ways.
 - **CSS** - Description here
 - **React** - Description here
 - **Service** - Using other services for:
-                +Login
-                +Submitting/Sharing Files
+                + Login
+                + Submitting/Sharing Files
 - **DB/Login** - Save and store login info in a secure database. Can't submit stories without being logged in. Register and Login users to access stories.
 - **WebSocket** - Description here
 
