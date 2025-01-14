@@ -47,9 +47,10 @@ sequenceDiagram
 
 ### Key features
 
-- Describe your key feature
-- Describe your key feature
-- Describe your key feature
+- Secure login
+- Create/Upload your own stories
+- Access other submitted stories
+- Collaborate on stories
 
 ### Technologies
 
