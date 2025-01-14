@@ -39,7 +39,7 @@ sequenceDiagram
     actor You
     actor Server
     actor Other User
-    You->>Server: MyStory.pdf
+    You->>Server: MyStory.txt
     Server-->>Other User: MyStory.txt
     Other User->>Server: Story2.txt
     Server-->>You: Story2.txt
@@ -56,14 +56,15 @@ sequenceDiagram
 
 I am going to use the required technologies in the following ways.
 
-- **HTML** - Description here
-- **CSS** - Description here
-- **React** - Description here
+- **HTML** - Use HTML to strcture the webpage. Three HTML pages for login, instructions, and adding/accessing stories. There will be hyperlinks to jump between pages. 
+- **CSS** - Styling the pages to make them look simple and easy to read. Choosing colors and fonts to organize and make the website look good. 
+- **React** - Allows buttons for adding files to work and makes the login work. 
 - **Service** - Using other services for:
     - Login
     - Submitting/Sharing Files
+    - Collaborative writing
 - **DB/Login** - Save and store login info in a secure database. Can't submit stories without being logged in. Register and Login users to access stories.
-- **WebSocket** - Description here
+- **WebSocket** - All public stories can be accessed and read by other users.
 
 ## 🚀 AWS deliverable
 
