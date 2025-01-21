@@ -40,5 +40,22 @@ In Chrome, you can use "about:blank" and use devtools to edit directly in a brow
 
 Local IP is 127.0.0.1
 
-
-
+### Elements 
+- div: Block division of content
+- span: Inline span of content
+- h
+- p
+- table
+- ol, ul
+- a
+- img
+- head
+- header
+- title
+- body
+- main
+- footer
+- nav
+- aside
+- form
+- input: Types-password, text, email, range, color, etc.
