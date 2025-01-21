@@ -40,6 +40,10 @@ In Chrome, you can use "about:blank" and use devtools to edit directly in a brow
 
 Local IP is 127.0.0.1
 
+Deploy my changed simon html to server as well as my own html.
+
+Also, don't forget to take notes as I implement (problems, solutions, tips, helpful links, etc.)
+
 ### Elements 
 - div: Block division of content
 - span: Inline span of content
