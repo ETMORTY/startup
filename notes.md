@@ -23,4 +23,20 @@ For windows: Use nslookup to find the IP of a website
 
 ## HTML Notes
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Usually starts with:
+<!Doctype html>
+<html lang="eng">
+<head>
+    <title>A Title</title> #displayed on the tab
+</head>
+
+<body>
+...
+</body>
+
+In Chrome, you can use "about:blank" and use devtools to edit directly in a browser
+
+Local IP is 127.0.0.1
+
+
+
