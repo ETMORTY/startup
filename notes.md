@@ -24,7 +24,7 @@ For windows: Use nslookup to find the IP of a website
 ## HTML Notes
 
 Usually starts with:
-<!Doctype html>
+<!-- <!Doctype html>
 <html lang="eng">
 <head>
     <title>A Title</title> #displayed on the tab
@@ -32,7 +32,7 @@ Usually starts with:
 
 <body>
 ...
-</body>
+</body> -->
 
 In Chrome, you can use "about:blank" and use devtools to edit directly in a browser
 
