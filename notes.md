@@ -44,6 +44,8 @@ Deploy my changed simon html to server as well as my own html.
 
 Also, don't forget to take notes as I implement (problems, solutions, tips, helpful links, etc.)
 
+It's really helpful to have the structure already in mind as you creat the HTML.
+
 ### Elements 
 - div: Block division of content
 - span: Inline span of content
