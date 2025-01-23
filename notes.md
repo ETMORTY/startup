@@ -46,6 +46,10 @@ Also, don't forget to take notes as I implement (problems, solutions, tips, help
 
 It's really helpful to have the structure already in mind as you creat the HTML.
 
+When you deploy it to the server, use a bash terminal or it won't load.
+
+
+
 ### Elements 
 - div: Block division of content
 - span: Inline span of content
@@ -65,3 +69,4 @@ It's really helpful to have the structure already in mind as you creat the HTML.
 - aside
 - form
 - input: Types-password, text, email, range, color, etc.
+- menu: creates an unordered list with items that you can select from
