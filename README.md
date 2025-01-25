@@ -70,7 +70,7 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 - [x] **Text** - There is a lot of text giving clear instructions on how to do a story date and how to use the website. There is also places where the stories will be written and be able to be read in the future. 
 - [x] **3rd party API placeholder** - For this, I included a link that doesn't work right now on the instruction page where I will link it to a google maps API to help the user find nearby locations as options for their date. 
 - [x] **Images** - At the moment, I have one image uploaded on the instruction page as an example of the structure for an idea to use envelopes to organize the date. I hope to add some more visuals later, but this is the only one I had at the moment. 
-- [x] **Login placeholder** - On the home page, I have a login placeholder with a login button and a create account button to submit.
+- [x] **Login placeholder** - On the home page, I have a login placeholder with a login button and a create account button to submit. The user info will be displayed in place of the "New User" text on each page. 
 - [x] **DB data placeholder** - On the stories page, I have 3 radio buttons as a placeholder for a story file. These will be files submitted by users, and each user will be able to select a file and read the story. These will be pulled from a database.
 - [x] **WebSocket placeholder** - The stories page will be updated with new stories in real time as new stories are added by other users.
 
