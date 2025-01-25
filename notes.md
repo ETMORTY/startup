@@ -48,7 +48,13 @@ It's really helpful to have the structure already in mind as you creat the HTML.
 
 When you deploy it to the server, use a bash terminal or it won't load.
 
-
+Tips for creating the HTML:
+- Create a basic structure for all pages that you can copy and paste between them before you customize
+- Radio buttons must be under the same name or they won't be linked together
+- Start very basic
+- As you go, leave placeholders for things you may do in the future (Spans, divs, other elements)
+- Pictures need to be in the local directory to load properly if they are uploaded
+- Don't get too caught up in the details yet
 
 ### Elements 
 - div: Block division of content
