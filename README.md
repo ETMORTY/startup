@@ -50,7 +50,7 @@ I am going to use the required technologies in the following ways.
 - **Service** - Using other services for:
     - Login
     - Submitting/Sharing Files
-    - Collaborative writing
+    - Maps to plan date
 - **DB/Login** - Save and store login info in a secure database. Can't submit stories without being logged in. Register and Login users to access stories.
 - **WebSocket** - All public stories can be accessed and read by other users.
 
@@ -64,15 +64,15 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **HTML pages** - I did not complete this part of the deliverable.
-- [ ] **Proper HTML element usage** - I did not complete this part of the deliverable.
-- [ ] **Links** - I did not complete this part of the deliverable.
-- [ ] **Text** - I did not complete this part of the deliverable.
-- [ ] **3rd party API placeholder** - I did not complete this part of the deliverable.
-- [ ] **Images** - I did not complete this part of the deliverable.
-- [ ] **Login placeholder** - I did not complete this part of the deliverable.
-- [ ] **DB data placeholder** - I did not complete this part of the deliverable.
-- [ ] **WebSocket placeholder** - I did not complete this part of the deliverable.
+- [x] **HTML pages** - 5 HTML pages used for login, instructions, accessing stories, submitting stories, and reading stories (this one will not be contained in the menu because you need to select a story from the stories page first)
+- [x] **Proper HTML element usage** - I used many elements to be able to organize the page and take input.
+- [x] **Links** - I have a menu that allows you to jump between pages. There are also links within the instructions to take you to the story page and to give you more information. The submission buttons on most pages will also link you to another page. 
+- [x] **Text** - There is a lot of text giving clear instructions on how to do a story date and how to use the website. There is also places where the stories will be written and be able to be read in the future. 
+- [x] **3rd party API placeholder** - For this, I included a link that doesn't work right now on the instruction page where I will link it to a google maps API to help the user find nearby locations as options for their date. 
+- [x] **Images** - At the moment, I have one image uploaded on the instruction page as an example of the structure for an idea to use envelopes to organize the date. I hope to add some more visuals later, but this is the only one I had at the moment. 
+- [x] **Login placeholder** - On the home page, I have a login placeholder with a login button and a create account button to submit.
+- [x] **DB data placeholder** - On the stories page, I have 3 radio buttons as a placeholder for a story file. These will be files submitted by users, and each user will be able to select a file and read the story. These will be pulled from a database.
+- [x] **WebSocket placeholder** - The stories page will be updated with new stories in real time as new stories are added by other users.
 
 ## 🚀 CSS deliverable
 
