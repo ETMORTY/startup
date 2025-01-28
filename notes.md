@@ -76,3 +76,23 @@ Tips for creating the HTML:
 - form
 - input: Types-password, text, email, range, color, etc.
 - menu: creates an unordered list with items that you can select from
+
+## CSS Notes
+To allow it to change window sizes (always include)
+~~~ 
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+~~~
+
+The float property can make it stay in a specific place regardless of screen size
+
+### Types of Display
+- None
+- Block
+- Inline
+- Flex
+- Grid
+
+Each display can be applied to a container (it will then be applied to each item in the container)
