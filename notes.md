@@ -88,6 +88,8 @@ To allow it to change window sizes (always include)
 
 The float property can make it stay in a specific place regardless of screen size
 
+Use Bootstrap to easily use CSS that has alreay been created
+- Use the card for my Story options
 ### Types of Display
 - None
 - Block
@@ -96,3 +98,22 @@ The float property can make it stay in a specific place regardless of screen siz
 - Grid
 
 Each display can be applied to a container (it will then be applied to each item in the container)
+
+Margin-->Border-->Padding-->Content
+
+### Media
+~~~
+@media (orientation: portrait) {
+ div {
+   transform: rotate(270deg);
+ }
+}
+<!-- If it changes to portrait mode, it will rotate -->
+
+@media ((orientation: portrait) and (max-height: 500px)) {
+ aside {
+   display: none;
+ }
+}
+<!-- It will disappear if it is portrait and too short -->
+~~~
