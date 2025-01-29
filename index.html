@@ -26,16 +26,22 @@
         </nav>
       <hr />
     </header>
-    <main>
-        <h1>Login</h1>
-        <form action="stories.html" method="get">
-            <label for="email">Email: </label><br>
-            <input type="email" placeholder="an@email.com" name="email"><br>
-            <label for="password">Password: </label><br>
-            <input type="password" placeholder="Enter a password" name="password"><br>
-            <input type="submit" value="Login">
-            <input type="submit" value="Create Account">
-        </form>
+    <main class="container-fluid text-center">
+        <div>
+            <h1>Login</h1>
+            <form action="stories.html" method="get" class="login">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email: </span>
+                    <input type="email" class="form-control" placeholder="your@email.com">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Password: </span>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <input type="submit" value="Login" class="btn btn-primary">
+                <input type="submit" value="Create Account" class="btn btn-secondary">
+            </form>
+        </div>
     </main>
     <hr />
     <footer class="container-fluid">

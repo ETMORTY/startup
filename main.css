@@ -12,11 +12,12 @@ header {
 
 menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     justify-content: space-between;
-    width: 100%;
     padding: 10px;
     background-color: #f0f0f0;
+    flex: 1;
+    list-style: none;
 }
 
 footer {
@@ -24,4 +25,12 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     background-color: wheat;
+}
+
+main {
+    flex: 1 1 calc(100vh - 180px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
