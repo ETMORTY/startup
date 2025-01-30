@@ -16,4 +16,5 @@ main {
 Also, is there a way to make the add button display over top of other elements */
 .AddButton {
     float: right;
+    z-index: 2;
 }
