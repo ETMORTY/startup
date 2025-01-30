@@ -11,3 +11,7 @@ main {
     column-gap: 50px;
     row-gap: 50px;
 }
+
+.AddButton {
+    float: right;
+}
