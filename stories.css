@@ -21,9 +21,9 @@ main {
 
 
 .AddButton {
-    position: absolute;
-    right: 15px;
-    top: calc(100vh - 125px);
+    position: fixed;
+    right: 20px;
+    top: calc(100vh - 100px);
     z-index: 1;
 }
 
