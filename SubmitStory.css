@@ -18,3 +18,19 @@ main {
     align-items: center;
     max-width: calc(100vw - 50px);
 }
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-betweenc;
+    align-items: center;
+    width: 100%;
+}
+
+/* .text-container .btn .Previous{
+    align-content: flex-start;
+}
+
+.text-container .btn .Next{
+    align-content: flex-end;
+} */
