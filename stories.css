@@ -19,8 +19,7 @@ main {
     align-items: center;
 }
 
-/* The grid and the add button don't go all the way to the right of the page. 
-Also, is there a way to make the add button display over top of other elements */
+
 .AddButton {
     position: absolute;
     right: 15px;
