@@ -78,12 +78,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Header, footer, and main content body** - I did not complete this part of the deliverable.
-- [ ] **Navigation elements** - I did not complete this part of the deliverable.
-- [ ] **Responsive to window resizing** - I did not complete this part of the deliverable.
-- [ ] **Application elements** - I did not complete this part of the deliverable.
-- [ ] **Application text content** - I did not complete this part of the deliverable.
-- [ ] **Application images** - I did not complete this part of the deliverable.
+- [x] **Header, footer, and main content body** - On every page, there is a header with a navigation bar and a footer with information about the author
+- [x] **Navigation elements** - These are found mostly on the navigation bar in the header. There are also additional navigation elements found in links in the instructions, the 'Begin Date!' buttons on the stories page, and the 'Add your own story' button also on that page
+- [x] **Responsive to window resizing** - As the window is resized, the navigation bar will switch from row to column, and elements on the page will wrap. The story cards will change grid formatting and adjust how many are in a row. On the Add a story page, the text boxes will resize according to screen size. 
+- [x] **Application elements** - Used contrast and whitespace to keep the website clean. I also included a more stylized way to select options when you read a story (it will highlight the option rather thann just select a radio button). I also included a button to add your own story that stays in the same place as you scroll. 
+- [x] **Application text content** - Consistent fonts, and elements of bolding at italics to highlight different parts. 
+- [x] **Application images** - I included a placeholder image for the map API on the instruction page (both resize with the window), and I also added an image as a logo at the top of the page and on the tab of the website. 
 
 ## 🚀 React part 1: Routing deliverable
 
