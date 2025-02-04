@@ -117,3 +117,22 @@ Margin-->Border-->Padding-->Content
 }
 <!-- It will disappear if it is portrait and too short -->
 ~~~
+
+## React Notes
+JSX - Combines JavaScript and HTML (the website will then have to pull it apart)
+
+I'll need some sort of tree structure for ech story. To read the story, I'll have all the parts defined in react as variables, and as you select the parts, it will define those variables. 
+
+Rather than having multiple pages, we have one page with elements appearing and disappearing
+
+~~~
+<BrowserRouter>
+...
+<main>
+  <Routes>
+    <Route path="/" element={<Page ccolor="red" />} exact>
+    <Route path="/green" element...>
+    <Route path=...>
+</main>
+</BrowserRouter>
+~~~
