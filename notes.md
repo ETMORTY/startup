@@ -136,3 +136,6 @@ Rather than having multiple pages, we have one page with elements appearing and 
 </main>
 </BrowserRouter>
 ~~~
+
+### From Experience
+It's actually not that complex to port. Simply copy the sections into jsx files under a function and change class to className.
