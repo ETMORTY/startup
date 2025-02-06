@@ -2,6 +2,8 @@ import React from 'react';
 import 'C:/Users/ethan/CS260/startup/src/app.css' 
 // Will this work in the long run? I'm not sure if this is the best way to do this.
 import './instructions.css';
+import { Link, Route } from 'react-router-dom';
+// import { Stories } from 'C:/Users/ethan/CS260/startup/src/stories/stories.jsx';
 
 export function Instructions() {
     return (
@@ -13,13 +15,13 @@ export function Instructions() {
                 <h1>Instructions</h1>
                 <h3>What is a story date?</h3>
                         <p>A story date is an idea that originally came from my brother. It's foundation is a "choose your own adventure story." 
-                        If you know what those are, the rest will be pretty simple. If not, <a href="instructions.html#adventure">click here</a>. The idea behind this
+                        If you know what those are, the rest will be pretty simple. If not, <Link to="#adventure">click here</Link>. The idea behind this
                         concept is that instead of already having the date planned before you head out, all you have is ideas for what you
                         could do. As you read through the "choose your own adventure story," you will be creating your date along the way.
                         <span>Perfect for group dates or smaller!</span></p>
                 <h3>How do I set it up?</h3>
                         <ol>
-                                <li>Pick a story from the <a href="stories.html">stories</a> tab</li>
+                                <li>Pick a story from the <Link to='/stories'>stories</Link> tab</li>
                                 <li>Decide on options for the date <span>(Feel free to customize and add alternatives in case of weather)</span></li>
                                 <ul>
                                         <li>2 activities options</li>
