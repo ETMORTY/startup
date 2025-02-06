@@ -19,7 +19,7 @@ export default function App() {
                             <img src="StoryDateLogo.png" alt="Logo" className="Logo navbar-brand" />
                             <menu>
                                 <ul className="navbar-nav">
-                                    <li className="nav-item"><NavLink to="" className="nav-link active" aria-current="page">Home</NavLink></li>
+                                    <li className="nav-item"><NavLink to="" className="nav-link" aria-current="page">Home</NavLink></li>
                                     <li className="nav-item"><NavLink to="instructions" className="nav-link">Instructions</NavLink></li>
                                     <li className="nav-item"><NavLink to="stories" className="nav-link">Stories</NavLink></li>
                                     <li className="nav-item"><NavLink to="SubmitStory" className="nav-link">Submit a Story</NavLink></li>
