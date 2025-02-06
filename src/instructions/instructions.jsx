@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function instructions() {
+export function Instructions() {
   return (
     <main className='container-fluid bg-secondary text-center'>
       <div>instructions displayed here</div>

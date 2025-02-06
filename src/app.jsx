@@ -2,32 +2,52 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { Login } from './login/login';
+import { Instructions } from './instructions/instructions';
+import { ReadStory } from './ReadStory/ReadStory';
+import { Stories } from './stories/stories';
+import { SubmitStory } from './SubmitStory/SubmitStory';
+
 export default function App() {
     return (
-        <div>
-            <header>
-                <nav className="navbar navbar-expand-lg">
-                    <div className="container-fluid">
-                        <img src="StoryDateLogo.png" alt="Logo" className="Logo navbar-brand" />
-                        <menu>
-                            <ul className="navbar-nav">
-                                <li className="nav-item"><a href="index.html" className="nav-link active" aria-current="page">Home</a></li>
-                                <li className="nav-item"><a href="instructions.html" className="nav-link">Instructions</a></li>
-                                <li className="nav-item"><a href="stories.html" className="nav-link">Stories</a></li>
-                                <li className="nav-item"><a href="SubmitStory.html" className="nav-link">Submit a Story</a></li>
-                            </ul>
-                        </menu>
-                    </div>
-                </nav>
-                <hr />
-            </header>
+        <BrowserRouter>
+            <div>
+                <header>
+                    <nav className="navbar navbar-expand-lg">
+                        <div className="container-fluid">
+                            <img src="StoryDateLogo.png" alt="Logo" className="Logo navbar-brand" />
+                            <menu>
+                                <ul className="navbar-nav">
+                                    <li className="nav-item"><NavLink to="" className="nav-link active" aria-current="page">Home</NavLink></li>
+                                    <li className="nav-item"><NavLink to="instructions" className="nav-link">Instructions</NavLink></li>
+                                    <li className="nav-item"><NavLink to="stories" className="nav-link">Stories</NavLink></li>
+                                    <li className="nav-item"><NavLink to="SubmitStory" className="nav-link">Submit a Story</NavLink></li>
+                                </ul>
+                            </menu>
+                        </div>
+                    </nav>
+                    <hr />
+                </header>
 
-            <main>App components go here</main>
+                <Routes>
+                    <Route path='/' element={<Login />} exact />
+                    <Route path='/instructions' element={<Instructions />} />
+                    <Route path='/stories' element={<Stories />} />
+                    <Route path='/SubmitStory' element={<SubmitStory />} />
+                    <Route path='/ReadStory/:id' element={<ReadStory />} />
+                    <Route path='*' element={<NotFound />} />
+                </Routes>
 
-            <footer className="container-fluid">
-                <p><span className="text-reset">Author: </span>Ethan Mortensen</p>
-                <a href="https://github.com/ETMORTY/startup.git" className="text-reset">GitHub</a>
-            </footer>
-        </div>
+                <footer className="container-fluid">
+                    <p><span className="text-reset">Author: </span>Ethan Mortensen</p>
+                    <a href="https://github.com/ETMORTY/startup.git" className="text-reset">GitHub</a>
+                </footer>
+            </div>
+        </BrowserRouter>
     );
 }
+
+function NotFound() {
+    return <main className='container-fluid bg-secondary text-center'>404: Return to sender. Address unknown.</main>;
+  }
