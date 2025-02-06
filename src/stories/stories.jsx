@@ -1,5 +1,6 @@
 import React from 'react';
 import './stories.css';
+import { Link } from 'react-router-dom';
 
 export function Stories() {
   return (
@@ -17,7 +18,7 @@ export function Stories() {
                 <div className="card-body">
                     <h5 className="card-title">Story 1</h5>
                     <p className="card-text">This is a story that has been submitted by a user. It will be a choose your own adventure story that will be created as you go.</p>
-                    <a href="ReadStory.html" className="btn btn-primary" id="Story1">Begin date!</a>
+                    <Link to="/ReadStory" className="btn btn-primary" id="Story1">Begin date!</Link>
                 </div>
             </div>
             <div className="card" style="width: 18rem;">
