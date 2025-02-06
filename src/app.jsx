@@ -12,7 +12,7 @@ import { SubmitStory } from './SubmitStory/SubmitStory';
 export default function App() {
     return (
         <BrowserRouter>
-            <div>
+            <div className='body'>
                 <header>
                     <nav className="navbar navbar-expand-lg">
                         <div className="container-fluid">

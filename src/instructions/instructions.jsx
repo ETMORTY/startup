@@ -1,16 +1,13 @@
 import React from 'react';
-import 'C:/Users/ethan/CS260/startup/src/app.css' 
-// Will this work in the long run? I'm not sure if this is the best way to do this.
 import './instructions.css';
 import { Link, Route } from 'react-router-dom';
-// import { Stories } from 'C:/Users/ethan/CS260/startup/src/stories/stories.jsx';
 
 export function Instructions() {
     return (
         <main className="container-fluid">
                 <div className="user">
                         User:
-                        <span className="username">New User</span>
+                        <span className="username"> New User</span>
                 </div>
                 <h1>Instructions</h1>
                 <h3>What is a story date?</h3>
