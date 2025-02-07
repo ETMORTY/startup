@@ -140,4 +140,8 @@ Rather than having multiple pages, we have one page with elements appearing and 
 ### From Experience
 It's actually not that complex to port. Simply copy the sections into jsx files under a function and change class to className.
 
-Need to change style and for to something else the same way we have to do className instead of class.
+Inline styling doesn't really work in react, so use a CSS file.
+
+Need to fix all my forms and buttons to go to the right places and not be linked to html files anymore.
+
+Also need to see if I can fix the styling on certain pages
