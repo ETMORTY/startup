@@ -1,7 +1,7 @@
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .title {
@@ -19,6 +19,10 @@ main {
     align-items: center;
 }
 
+.card {
+    width: 18rem;
+}
+
 
 .AddButton {
     position: fixed;
@@ -30,4 +34,5 @@ main {
 .AddButton a {
     background-color: #7fffd4;
     opacity: 0.8;
+    width: 37px;
 }
