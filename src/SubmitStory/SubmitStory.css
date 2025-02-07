@@ -19,6 +19,10 @@ main {
     max-width: calc(100vw - 50px);
 }
 
+.textBoxes .title {
+    width: 450px;
+}
+
 .btn {
     display: flex;
     flex-direction: row;

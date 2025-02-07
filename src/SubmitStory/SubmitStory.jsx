@@ -15,7 +15,7 @@ export function SubmitStory() {
             <p><em>Submit a story for others to enjoy</em></p>
             <form action="SubmitStory.html" method="get">
                 <label for="Title">Title: </label>
-                    <input type="text" className="textBoxes" name="Title" style="width: 450px;" /><br />
+                    <input type="text" className="textBoxes title" name="Title" /><br />
                 <label for="Intro">Intro: </label>
                     <textarea className="textBoxes" rows="10" cols="70"></textarea><br />
                     
