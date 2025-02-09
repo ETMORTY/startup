@@ -89,9 +89,9 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Bundled using Vite** - I did not complete this part of the deliverable.
-- [ ] **Components** - I did not complete this part of the deliverable.
-- [ ] **Router** - Routing between login and voting components.
+- [x] **Bundled using Vite** - Done!
+- [x] **Components** - I have the stories buttons now navigate to pages with their specific IDs so they can be different later. I have components for each of my pages (login, instructions, stories, ReadStories, and SubmitStory).
+- [x] **Router** - I have routing in the navigation bar on the top of the screen between the different tabs as well as navigation with a link on the instructions page and the buttons on the stories page.
 
 ## 🚀 React part 2: Reactivity
 
