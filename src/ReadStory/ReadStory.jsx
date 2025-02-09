@@ -1,5 +1,6 @@
 import React from 'react';
 import './ReadStory.css';
+import { Link } from 'react-router-dom';
 
 export function ReadStory() {
   return (
@@ -25,14 +26,14 @@ export function ReadStory() {
                 Suddenly, the engine starts to stutter, the car begins to jerk. Smoke comes out from underneath the hood. We pull over to the side of the road. With a final wheeze like that of a dying animal, the engine shuts off. After the smoke clears, we get out of the car and look around. We see…
                 </p>
         </div>
-        <form action="ReadStory.html">
+        <form>
             <div className="options">
                 <input type="radio" id="Option1" value="Option 1" name="StoryOptions" />
                 <label htmlFor="Option1"><strong>1A</strong> A dark, scary forest. The trees have grown twisted together, and thorny undergrowth fills in the gaps too small for the trees. There is a narrow trail, and through the trees we can see a dim light. “Maybe that’s someplace we can get help.” We walk into the woods.</label><br />
                 <input type="radio" id="Option2" value="Option 2" name="StoryOptions" />
                 <label htmlFor="Option2"><strong>1B</strong> An old, rickety house, with pointed spires and boarded up windows. Spider webs drape the front porch like the tattered shawl of an old crone. In one of the windows, a faint flickering light can be seen. “Maybe they have a phone we can use.” We start up the main walkway.</label><br />
             </div>
-            <button className="btn btn-primary">Submit</button>
+            <Link className="btn btn-primary">Submit</Link>
         </form>
     </main>
   );

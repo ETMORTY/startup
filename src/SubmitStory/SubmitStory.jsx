@@ -1,5 +1,6 @@
 import React from 'react';
 import './SubmitStory.css';
+import { Link } from 'react-router-dom';
 
 export function SubmitStory() {
   return (
@@ -31,8 +32,10 @@ export function SubmitStory() {
                 <label for="Option4">4A: </label>
                     <textarea className="textBoxes" name="Option4" rows="10" cols="70"></textarea><br />
       
-                <input type="submit" value="Previous" className="btn btn-secondary Next" />
-                <input type="submit" value="Next" className="btn btn-primary Previous" />
+                {/* <input type="submit" value="Previous" className="btn btn-secondary Next" />
+                <input type="submit" value="Next" className="btn btn-primary Previous" /> */}
+                <Link to="/SubmitStory" className="btn btn-primary">Previous</Link>
+                <Link to="/SubmitStory" className="btn btn-primary">Next</Link>
             </form>
         </div>
     </main>
