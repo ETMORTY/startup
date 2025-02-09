@@ -30,10 +30,12 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     background-color: pink;
+    position: relative;
+    bottom: 0;
 }
 
 main {
-    flex: 1 1 calc(100vh - 180px);
+    flex: 1 1 calc(100vh - 150px);
     display: flex;
     flex-direction: column;
     align-items: center;
