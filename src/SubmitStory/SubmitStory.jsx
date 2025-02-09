@@ -34,7 +34,7 @@ export function SubmitStory() {
       
                 {/* <input type="submit" value="Previous" className="btn btn-secondary Next" />
                 <input type="submit" value="Next" className="btn btn-primary Previous" /> */}
-                <Link to="/SubmitStory" className="btn btn-primary">Previous</Link>
+                <Link to="/SubmitStory" className="btn btn-secondary">Previous</Link>
                 <Link to="/SubmitStory" className="btn btn-primary">Next</Link>
             </form>
         </div>
