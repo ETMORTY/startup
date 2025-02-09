@@ -142,6 +142,4 @@ It's actually not that complex to port. Simply copy the sections into jsx files 
 
 Inline styling doesn't really work in react, so use a CSS file.
 
-Need to fix all my forms and buttons to go to the right places and not be linked to html files anymore.
-
-Also need to see if I can fix the styling on certain pages
+Still need to fix the link on the instructions page to scroll to the bottom of the page
