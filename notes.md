@@ -143,3 +143,13 @@ It's actually not that complex to port. Simply copy the sections into jsx files 
 Inline styling doesn't really work in react, so use a CSS file.
 
 Still need to fix the link on the instructions page to scroll to the bottom of the page
+
+## React Phase 2
+Pass in a const and a function that is connected to a React.useState
+
+We can then call that const and update it with the function. 
+
+It renders asynchronosly (it waits a little bit before rerendering to limit the ammount of times to rerender)
+
+To do inline styling, you need to escape into javascript by using {} and then do the styling in that.
+
