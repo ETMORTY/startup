@@ -1,8 +1,11 @@
 import React from 'react';
 import './instructions.css';
 import { Link, Route } from 'react-router-dom';
+import { AuthState } from '../login/authState';
 
 export function Instructions() {
+        const currentAuthState = localStorage.getItem('userName') ? AuthState.Authenticated : AuthState.Unauthenticated;
+        const [authState, setAuthState] = React.useState(currentAuthState);
     return (
         <main className="container-fluid">
                 <div className="user">
@@ -15,10 +18,10 @@ export function Instructions() {
                         If you know what those are, the rest will be pretty simple. If not, <Link to="#adventure">click here</Link>. The idea behind this
                         concept is that instead of already having the date planned before you head out, all you have is ideas for what you
                         could do. As you read through the "choose your own adventure story," you will be creating your date along the way.
-                        <span>Perfect for group dates or smaller!</span></p>
+                        <span> Perfect for group dates or smaller!</span></p>
                 <h3>How do I set it up?</h3>
                         <ol>
-                                <li>Pick a story from the <Link to='/stories'>stories</Link> tab</li>
+                                <li>Pick a story from the {authState === AuthState.Authenticated && (<Link to='/stories'>stories</Link>)} {authState === AuthState.Unauthenticated && <span>stories</span>} tab {authState === AuthState.Unauthenticated && <span>after logging in or creating an account</span>}</li>
                                 <li>Decide on options for the date <span>(Feel free to customize and add alternatives in case of weather)</span></li>
                                 <ul>
                                         <li>2 activities options</li>
