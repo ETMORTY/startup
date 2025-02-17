@@ -8,8 +8,12 @@ import { Instructions } from './instructions/instructions';
 import { ReadStory } from './ReadStory/ReadStory';
 import { Stories } from './stories/stories';
 import { SubmitStory } from './SubmitStory/SubmitStory';
+import { AuthState } from './login/authState';
 
 export default function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
     return (
         <BrowserRouter>
             <div className='body'>
@@ -21,8 +25,8 @@ export default function App() {
                                 <ul className="navbar-nav">
                                     <li className="nav-item"><NavLink to="" className="nav-link" aria-current="page">Home</NavLink></li>
                                     <li className="nav-item"><NavLink to="instructions" className="nav-link">Instructions</NavLink></li>
-                                    <li className="nav-item"><NavLink to="stories" className="nav-link">Stories</NavLink></li>
-                                    <li className="nav-item"><NavLink to="SubmitStory" className="nav-link">Submit a Story</NavLink></li>
+                                    {authState === AuthState.Authenticated && (<li className="nav-item"><NavLink to="stories" className="nav-link">Stories</NavLink></li>)}
+                                    {authState === AuthState.Authenticated && (<li className="nav-item"><NavLink to="SubmitStory" className="nav-link">Submit a Story</NavLink></li>)}
                                 </ul>
                             </menu>
                         </div>
@@ -31,7 +35,13 @@ export default function App() {
                 </header>
 
                 <Routes>
-                    <Route path='/' element={<Login />} exact />
+                    <Route path='/' element={<Login 
+                    userName={userName}
+                    authState={authState}
+                    onAuthChange={(userName, authState) => {
+                    setAuthState(authState);
+                    setUserName(userName);
+                }}/>} exact />
                     <Route path='/instructions' element={<Instructions />} />
                     <Route path='/stories' element={<Stories />} />
                     <Route path='/SubmitStory' element={<SubmitStory />} />

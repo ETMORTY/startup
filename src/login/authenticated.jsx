@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Button from "react-bootstrap/Button";
 
 export function Authenticated(props) {
     function logout() {
@@ -10,7 +10,7 @@ export function Authenticated(props) {
     return (
         <div className="content">
             <h1>Welcome, {props.userName}</h1>
-            <Link to="/" className="btn btn-primary" onClick={ logout() }>Logout</Link>
+            <Button className="btn btn-primary" onClick={ () => logout() }>Logout</Button>
         </div>
     );
 }
