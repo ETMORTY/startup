@@ -10,7 +10,7 @@ export function Stories() {
         <div className="title">
             <div className="user">
                 User:
-                <span className="username">New User</span>
+                <span className="username"> {localStorage.userName}</span>
             </div>
             <h1>Stories</h1>
             <p><em>A catalog of stories to select from</em></p>

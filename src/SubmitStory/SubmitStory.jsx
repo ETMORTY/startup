@@ -8,7 +8,7 @@ export function SubmitStory() {
         <div className="title">  
             <div className="user">
                 User:
-                <span className="username">New User</span>
+                <span className="username"> {localStorage.userName}</span>
             </div>
             <h1>Submit A Story</h1>
         </div>

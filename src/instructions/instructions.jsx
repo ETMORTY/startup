@@ -7,7 +7,7 @@ export function Instructions() {
         <main className="container-fluid">
                 <div className="user">
                         User:
-                        <span className="username"> New User</span>
+                        <span className="username"> {localStorage.userName}</span>
                 </div>
                 <h1>Instructions</h1>
                 <h3>What is a story date?</h3>
