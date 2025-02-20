@@ -153,3 +153,20 @@ It renders asynchronosly (it waits a little bit before rerendering to limit the 
 
 To do inline styling, you need to escape into javascript by using {} and then do the styling in that.
 
+## Promises
+It is easy to overload the CPU with JavaScript because it is single-threaded (it can only really do one thing at a time)
+
+Everything must be asynchronous
+- Basically, it will go do something in the background and come back to tell us the result (success, failed, pending)
+
+Eventually for use with the fetch function (this can take time, and we don't want the rest of the program to wait for a result before anything changes)
+
+Resolve or reject (success or failure and a result to indicate which one)
+- You can also use .catch to show when it is rejected or when there is an error
+
+Await removes the nested promises and just returns the result when it's done.
+- It doesn't move on until the thing happens
+
+async function turns it into a promise with the return as the value
+
+To use an await, every function above it has to be an async function.
