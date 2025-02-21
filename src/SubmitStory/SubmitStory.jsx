@@ -2,6 +2,18 @@ import React from 'react';
 import './SubmitStory.css';
 import { Link } from 'react-router-dom';
 
+const Option1 = ["1A", "1B"]
+const Option2 = ["2A", "2B", "2C", "2D"]
+const Option3 = ["3A", "3B", "3C", "3D", "3E", "3F", "3G", "3H"]
+const Option4 = ["4A", "4B", "4C", "4D", "4E", "4F", "4G", "4H", "4I", "4J", "4K", "4L", "4M", "4N", "4O", "4P"]
+
+function cycleOptions(option) {
+    let i = 0
+    if (textarea.name === "Option1") {
+        return Option1[i++]
+    }
+}
+
 export function SubmitStory() {
   return (
     <main className="container-fluid">
