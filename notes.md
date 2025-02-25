@@ -163,6 +163,16 @@ const [text, setText] = React.useState(0);
 <div>{text}</div>
 ~~~
 
+### What I Need to Accomplish
+[x] Alternate textboxes
+[] Save text to variables (maybe a list? or maybe a map?)
+[] Pass that data into my story class
+[] Save that story locally
+[] Read that story
+[] Placeholders for API
+[] Scroll in instructions
+[] Styling
+
 ## Promises
 It is easy to overload the CPU with JavaScript because it is single-threaded (it can only really do one thing at a time)
 
