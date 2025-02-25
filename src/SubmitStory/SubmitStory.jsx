@@ -1,20 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SubmitStory.css';
 import { Link } from 'react-router-dom';
 
-const Option1 = ["1A", "1B"]
-const Option2 = ["2A", "2B", "2C", "2D"]
-const Option3 = ["3A", "3B", "3C", "3D", "3E", "3F", "3G", "3H"]
-const Option4 = ["4A", "4B", "4C", "4D", "4E", "4F", "4G", "4H", "4I", "4J", "4K", "4L", "4M", "4N", "4O", "4P"]
-
-function cycleOptions(option) {
-    let i = 0
-    if (textarea.name === "Option1") {
-        return Option1[i++]
-    }
-}
-
 export function SubmitStory() {
+    const Option1 = ["1A", "1B"]
+    const Option2 = ["2A", "2B", "2C", "2D"]
+    const Option3 = ["3A", "3B", "3C", "3D", "3E", "3F", "3G", "3H"]
+    const Option4 = ["4A", "4B", "4C", "4D", "4E", "4F", "4G", "4H", "4I", "4J", "4K", "4L", "4M", "4N", "4O", "4P"]
+    const [i, seti] = useState(0)
+    const [j, setj] = useState(0)
+    const [k, setk] = useState(0)
+    const [l, setl] = useState(0)
+    const [counter, setCounter] = useState(0)
+
+    function cycleNext() {
+        if (counter === 7) {
+            seti(prevCount => prevCount + 1)
+            
+        }
+        if (counter === 3 | counter === 7 | counter === 11) {
+            setj(prevCount => prevCount + 1)
+            
+        }
+        if (counter === 1 | counter === 3 | counter === 5 | counter === 7 | counter === 9 | counter === 11 | counter === 13) {
+            setk(prevCount => prevCount + 1)
+            
+        }
+        if (l === Option4.length - 1) {
+            setl(0)
+            seti(0)
+            setj(0)
+            setk(0)
+            setCounter(-1)
+        }
+        else {setl(prevCount => prevCount + 1)}
+        setCounter(prevCount => prevCount + 1)
+    }
+    function cyclePrev() {
+        if (counter !== 0) {
+            if (counter === 8) {
+                seti(prevCount => prevCount - 1)
+                
+            }
+            if (counter === 4 | counter === 8 | counter === 12) {
+                setj(prevCount => prevCount - 1)
+                
+            }
+            if (counter === 2 | counter === 4 | counter === 6 | counter === 8 | counter === 10 | counter === 12 | counter === 14) {
+                setk(prevCount => prevCount - 1)
+                
+            }
+            if (l === Option4.length - 1) {
+                setl(0)
+                seti(0)
+                setj(0)
+                setk(0)
+                setCounter(-1)
+            }
+            else {setl(prevCount => prevCount - 1)}
+            setCounter(prevCount => prevCount - 1)
+        }
+    }
   return (
     <main className="container-fluid">
         <div className="title">  
@@ -32,22 +78,22 @@ export function SubmitStory() {
                 <label for="Intro">Intro: </label>
                     <textarea className="textBoxes" rows="10" cols="70"></textarea><br />
                     
-                <label for="Option1">1A: </label>
+                <label for="Option1">{Option1[i]}: </label>
                     <textarea className="textBoxes" name="Option1" rows="10" cols="70"></textarea><br />
                     
-                <label for="Option2">2A: </label>
+                <label for="Option2">{Option2[j]}: </label>
                     <textarea className="textBoxes" name="Option2" rows="10" cols="70"></textarea><br />
                     
-                <label for="Option3">3A: </label>
+                <label for="Option3">{Option3[k]}: </label>
                     <textarea className="textBoxes" name="Option3" rows="10" cols="70"></textarea><br />
                     
-                <label for="Option4">4A: </label>
+                <label for="Option4">{Option4[l]}: </label>
                     <textarea className="textBoxes" name="Option4" rows="10" cols="70"></textarea><br />
       
                 {/* <input type="submit" value="Previous" className="btn btn-secondary Next" />
                 <input type="submit" value="Next" className="btn btn-primary Previous" /> */}
-                <Link to="/SubmitStory" className="btn btn-secondary">Previous</Link>
-                <Link to="/SubmitStory" className="btn btn-primary">Next</Link>
+                <Link to="/SubmitStory" className="btn btn-secondary" onClick={() => cyclePrev()}>Previous</Link>
+                <Link to="/SubmitStory" className="btn btn-primary" onClick={() => cycleNext()}>Next</Link>
             </form>
         </div>
     </main>
