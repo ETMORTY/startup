@@ -153,6 +153,16 @@ It renders asynchronosly (it waits a little bit before rerendering to limit the 
 
 To do inline styling, you need to escape into javascript by using {} and then do the styling in that.
 
+~~~
+function updateText() {
+  "Change the value of text"
+}
+
+const [text, setText] = React.useState(0);
+<input type='text' onChange={updateText} />
+<div>{text}</div>
+~~~
+
 ## Promises
 It is easy to overload the CPU with JavaScript because it is single-threaded (it can only really do one thing at a time)
 
@@ -170,3 +180,32 @@ Await removes the nested promises and just returns the result when it's done.
 async function turns it into a promise with the return as the value
 
 To use an await, every function above it has to be an async function.
+
+## Backend
+curl is an in-console search or request (shows the code for a website in the console)
+- You can use the -v to show more information
+
+Use the URL to do a fetch request
+https://byu.edu:443/api/city?q=pro#3
+- https:// (Scheme)
+- byu.edu (Domain)
+- :443 (Port)
+- /api/city (Path)
+- ?q=pro (Parameters)
+- #3 (Anchor)
+
+End methods
+- POST (create)
+- GET (Get a resource)
+- PUT (Update information)
+- DELETE (Delete a resource)
+
+Status Code
+- 200 or OK (Success)
+- 204 (Success but no data to return)
+- 301/302 redirect, 304 not modified
+- 400 bad request (client made an error), 404 not found
+- 403 forbidden, 429 too many requests
+- 500 server error, 503 not available
+
+### Fetch
