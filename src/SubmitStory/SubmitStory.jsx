@@ -7,6 +7,19 @@ export function SubmitStory() {
     const Option2 = ["2A", "2B", "2C", "2D"]
     const Option3 = ["3A", "3B", "3C", "3D", "3E", "3F", "3G", "3H"]
     const Option4 = ["4A", "4B", "4C", "4D", "4E", "4F", "4G", "4H", "4I", "4J", "4K", "4L", "4M", "4N", "4O", "4P"]
+    const storyMap = {}
+    for (let i = 0; i < Option1.length; i++) {
+        storyMap[Option1[i]] = ""
+    }
+    for (let i = 0; i < Option2.length; i++) {
+        storyMap[Option2[i]] = ""
+    }
+    for (let i = 0; i < Option3.length; i++) {
+        storyMap[Option3[i]] = ""
+    }
+    for (let i = 0; i < Option4.length; i++) {
+        storyMap[Option4[i]] = ""
+    }
     const [i, seti] = useState(0)
     const [j, setj] = useState(0)
     const [k, setk] = useState(0)
@@ -61,6 +74,16 @@ export function SubmitStory() {
             setCounter(prevCount => prevCount - 1)
         }
     }
+
+    function saveNewValues() {
+        storyMap[Option1[i]] = document.getElementsByName("Option1")[0].value
+        storyMap[Option2[j]] = document.getElementsByName("Option2")[0].value
+        storyMap[Option3[k]] = document.getElementsByName("Option3")[0].value
+        storyMap[Option4[l]] = document.getElementsByName("Option4")[0].value
+        console.log(storyMap)
+    }
+
+    
   return (
     <main className="container-fluid">
         <div className="title">  
@@ -92,8 +115,8 @@ export function SubmitStory() {
       
                 {/* <input type="submit" value="Previous" className="btn btn-secondary Next" />
                 <input type="submit" value="Next" className="btn btn-primary Previous" /> */}
-                <Link to="/SubmitStory" className="btn btn-secondary" onClick={() => cyclePrev()}>Previous</Link>
-                <Link to="/SubmitStory" className="btn btn-primary" onClick={() => cycleNext()}>Next</Link>
+                <Link to="/SubmitStory" className="btn btn-secondary" onClick={() => {saveNewValues(); cyclePrev()}}>Previous</Link>
+                <Link to="/SubmitStory" className="btn btn-primary" onClick={() => {saveNewValues(); cycleNext()}}>Next</Link>
             </form>
         </div>
     </main>
