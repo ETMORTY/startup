@@ -31,7 +31,7 @@ export function ReadStory() {
         const option2Radio = document.getElementById("Option2");
         
         if (option1Radio.checked) {
-            setStoryText(storyText + " " + option1)
+            setStoryText(storyText + " | " + option1)
             console.log("Option 1");
             console.log(option1Radio.value);
             if (counter < 3) {
@@ -39,7 +39,7 @@ export function ReadStory() {
             }
             
         } else if (option2Radio.checked) {
-            setStoryText(storyText + " " + option2)
+            setStoryText(storyText + " | " + option2)
             console.log("Option 2");
             console.log(option2Radio.value);
             if (counter < 3) {
