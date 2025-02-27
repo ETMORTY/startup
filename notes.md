@@ -165,9 +165,9 @@ const [text, setText] = React.useState(0);
 
 ### What I Need to Accomplish
 [x] Alternate textboxes
-[] Save text to variables (maybe a list? or maybe a map?)
-[] Pass that data into my story class
-[] Save that story locally
+[x] Save text to variables (maybe a list? or maybe a map?)
+[x] Pass that data into my story class
+[x] Save that story locally
 [] Read that story
 [] Placeholders for API
 [] Scroll in instructions
@@ -218,4 +218,16 @@ Status Code
 - 403 forbidden, 429 too many requests
 - 500 server error, 503 not available
 
-### Fetch
+### Express
+- Express
+- app
+
+use will take any function, so put it after all of the others so it will check them first
+
+In your handler, you can put additional middleware (functions that can check your request)
+- You can then call next to move to the next step
+
+Use this to secure your pages that need authentication (no token)
+- You can't access it unless you have a token
+
+: is a placeholder (then you can pull things from the path to use on the page)
