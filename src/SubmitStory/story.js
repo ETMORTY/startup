@@ -7,7 +7,10 @@ class Option {
 }
 
 class Story {
-    constructor(Title, Intro, oneA, oneB, twoA, twoB, twoC, twoD, threeA, threeB, threeC, threeD, threeE, threeF, threeG, threeH, fourA, fourB, fourC, fourD, fourE, fourF, fourG, fourH, fourI, fourJ, fourK, fourL, fourM, fourN, fourO, fourP) {
+    constructor(Title, Intro, oneA, oneB, twoA, twoB, twoC, twoD, threeA, 
+        threeB, threeC, threeD, threeE, threeF, threeG, threeH, fourA, fourB, 
+        fourC, fourD, fourE, fourF, fourG, fourH, fourI, fourJ, fourK, fourL, 
+        fourM, fourN, fourO, fourP) {
         this.Title = Title;
         new Option(Intro, oneA, oneB);
         new Option(oneA, twoA, twoB);
