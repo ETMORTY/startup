@@ -53,7 +53,7 @@ export function SubmitStory() {
             storyMap.get("4L"), storyMap.get("4M"), storyMap.get("4N"), storyMap.get("4O"), 
             storyMap.get("4P"))
         console.log(story)
-        localStorage.setItem(storyMap.get("Title"), story)
+        localStorage.setItem(storyMap.get("Title"), JSON.stringify(story))
         console.log(localStorage.getItem(storyMap.get("Title")))
     }
 
@@ -183,7 +183,7 @@ export function SubmitStory() {
                 <input type="submit" value="Next" className="btn btn-primary Previous" /> */}
                 <Button className="btn btn-secondary" onClick={() => saveNewValues(cyclePrev)}>Previous</Button>
                 <Button className="btn btn-primary" onClick={() => saveNewValues(cycleNext)}>Next</Button>
-                <Button className="btn btn-success" onClick={() => [saveNewValues(), saveStory()]}>Submit</Button>
+                <Button className="btn btn-success" onClick={() => [saveNewValues(cycleNext), saveStory()]}>Submit</Button>
             </form>
         </div>
     </main>
