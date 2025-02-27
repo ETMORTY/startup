@@ -183,7 +183,7 @@ export function SubmitStory() {
                 <input type="submit" value="Next" className="btn btn-primary Previous" /> */}
                 <Button className="btn btn-secondary" onClick={() => saveNewValues(cyclePrev)}>Previous</Button>
                 <Button className="btn btn-primary" onClick={() => saveNewValues(cycleNext)}>Next</Button>
-                <Button className="btn btn-success" onClick={() => saveStory()}>Submit</Button>
+                <Button className="btn btn-success" onClick={() => [saveNewValues(), saveStory()]}>Submit</Button>
             </form>
         </div>
     </main>
