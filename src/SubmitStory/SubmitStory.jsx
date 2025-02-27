@@ -41,7 +41,7 @@ export function SubmitStory() {
         console.log("Save Story")
         console.log(storyMap)
         const arr = Array.from(storyMap)
-        localStorage.setItem(storyMap.get("Title") + "-map", JSON.stringify(arr))
+        localStorage.setItem("Story1" + "-map", JSON.stringify(arr))
         console.log(localStorage.getItem(storyMap.get("Title") + "-map"))
         const story = new Story(storyMap.get("Title"), storyMap.get("Intro"), storyMap.get("1A"), 
             storyMap.get("1B"), storyMap.get("2A"), storyMap.get("2B"), storyMap.get("2C"), 
@@ -53,8 +53,8 @@ export function SubmitStory() {
             storyMap.get("4L"), storyMap.get("4M"), storyMap.get("4N"), storyMap.get("4O"), 
             storyMap.get("4P"))
         console.log(story)
-        localStorage.setItem(storyMap.get("Title"), JSON.stringify(story))
-        console.log(localStorage.getItem(storyMap.get("Title")))
+        localStorage.setItem("Story1", JSON.stringify(story))
+        console.log(localStorage.getItem("Story1"))
     }
 
     function initializeText() {

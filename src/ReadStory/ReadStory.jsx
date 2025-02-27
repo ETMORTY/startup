@@ -1,39 +1,59 @@
 import React from 'react';
 import './ReadStory.css';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/esm/Button';
+import { useEffect } from 'react';
 
 export function ReadStory() {
+    const fullUrl = window.location.href;
+    console.log(fullUrl);
+    const storyId = fullUrl.substring(fullUrl.lastIndexOf("/") + 1).replace(/%20/g, " ");
+    console.log(storyId);
+    const story = JSON.parse(localStorage.getItem("Story1")); //Fix later so it isn't hard coded
+    console.log(story);
+
+    const [selection, setSelection] = React.useState(story.OptionIntro);
+    const [option1, setOption1] = React.useState(selection.next1.text);
+    const [option2, setOption2] = React.useState(selection.next2.text);
+
+    function addSelection() {
+        console.log("Add Selection");
+        const option1 = document.getElementById("Option1");
+        const option2 = document.getElementById("Option2");
+        if (option1.checked) {
+            console.log("Option 1");
+            console.log(option1.value);
+            setSelection(selection.next1);
+        } else if (option2.checked) {
+            console.log("Option 2");
+            console.log(option2.value);
+            setSelection(selection.next2);
+        }
+    }
+    
+    useEffect(() => {
+        setOption1(option1 ? selection.next1.text : "You finished the story!");
+        setOption2(option2 ? selection.next2.text : "You finished the story!");
+    });
+
   return (
     <main className="container-fluid">
         <div className="user">
             User:
             <span className="username"> {localStorage.userName}</span>
         </div>
-        <h1>Title of Story</h1>
+        <h1>{storyId}</h1>
         <div className="story">
-            <p>It was Halloween night, and we were heading to a Halloween party at a friend’s house, who lived a good distance away.
-                “Honey, we’re going to be late, we were supposed to be at the party thirty minutes ago.”
-                “I’m driving as fast as I can, it’s not my fault Provo traffic is terrible.”
-                “Well, if we would have left at 5:30 like I’d planned—“
-                “It’s not my fault my costume broke!”
-                We drive farther and the landscape gets more and more unfamiliar. No longer are we in a bustling city, but somewhere out in the middle of nowhere.
-                “Honey, I think you missed a turn—“
-                “I didn’t miss a turn.”
-                “Are you sure? I’m pretty sure the Smiths live in a subdivision, not out in the countryside.”
-                “Yes, I’m sure. Joe told me to turn after the old bridge. I haven’t seen a bridge yet.”
-                “Why didn’t Joe just give us his address? I could’ve put it into my phone.”
-                “Cellphones don’t work this far out, and I don’t even think Joe could remember his birthday, let alone his address. He still has to search his phone for his own phone number.”
-                Suddenly, the engine starts to stutter, the car begins to jerk. Smoke comes out from underneath the hood. We pull over to the side of the road. With a final wheeze like that of a dying animal, the engine shuts off. After the smoke clears, we get out of the car and look around. We see…
-                </p>
+            <p>{story.Intro}</p>
         </div>
         <form>
             <div className="options">
-                <input type="radio" id="Option1" value="Option 1" name="StoryOptions" />
-                <label htmlFor="Option1"><strong>1A</strong> A dark, scary forest. The trees have grown twisted together, and thorny undergrowth fills in the gaps too small for the trees. There is a narrow trail, and through the trees we can see a dim light. “Maybe that’s someplace we can get help.” We walk into the woods.</label><br />
-                <input type="radio" id="Option2" value="Option 2" name="StoryOptions" />
-                <label htmlFor="Option2"><strong>1B</strong> An old, rickety house, with pointed spires and boarded up windows. Spider webs drape the front porch like the tattered shawl of an old crone. In one of the windows, a faint flickering light can be seen. “Maybe they have a phone we can use.” We start up the main walkway.</label><br />
+                <input type="radio" id="Option1" value={option1} name="StoryOptions" />
+                <label htmlFor="Option1"><strong>1A</strong> {option1}</label><br />
+                <input type="radio" id="Option2" value={option2} name="StoryOptions" />
+                <label htmlFor="Option2"><strong>1B</strong> {option2}</label><br />
             </div>
-            <Link className="btn btn-primary">Submit</Link>
+            <Button className="btn btn-primary" onClick={() => addSelection() }>Submit</Button>
         </form>
     </main>
   );

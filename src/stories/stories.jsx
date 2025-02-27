@@ -6,7 +6,7 @@ import {SubmitStory} from '../SubmitStory/SubmitStory.jsx'
 const myStyle = {}
 
 export function Stories() {
-    const story1 = JSON.parse(localStorage.getItem("title"))
+    const story1 = JSON.parse(localStorage.getItem("Story1"))
   return (
     <main className="container-fluid">
         <div className="title">
