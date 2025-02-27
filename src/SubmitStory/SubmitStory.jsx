@@ -1,7 +1,8 @@
-import React, { useState, useEffect, use } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SubmitStory.css';
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
+import { Story } from '../SubmitStory/story.js';
 
 
 export function SubmitStory() {
@@ -35,6 +36,26 @@ export function SubmitStory() {
     const [option2Value, setOption2Value] = useState("")
     const [option3Value, setOption3Value] = useState("")
     const [option4Value, setOption4Value] = useState("Sample Text")
+
+    function saveStory() {
+        console.log("Save Story")
+        console.log(storyMap)
+        const arr = Array.from(storyMap)
+        localStorage.setItem(storyMap.get("Title") + "-map", JSON.stringify(arr))
+        console.log(localStorage.getItem(storyMap.get("Title") + "-map"))
+        const story = new Story(storyMap.get("Title"), storyMap.get("Intro"), storyMap.get("1A"), 
+            storyMap.get("1B"), storyMap.get("2A"), storyMap.get("2B"), storyMap.get("2C"), 
+            storyMap.get("2D"), storyMap.get("3A"), storyMap.get("3B"), storyMap.get("3C"), 
+            storyMap.get("3D"), storyMap.get("3E"), storyMap.get("3F"), storyMap.get("3G"), 
+            storyMap.get("3H"), storyMap.get("4A"), storyMap.get("4B"), storyMap.get("4C"), 
+            storyMap.get("4D"), storyMap.get("4E"), storyMap.get("4F"), storyMap.get("4G"), 
+            storyMap.get("4H"), storyMap.get("4I"), storyMap.get("4J"), storyMap.get("4K"), 
+            storyMap.get("4L"), storyMap.get("4M"), storyMap.get("4N"), storyMap.get("4O"), 
+            storyMap.get("4P"))
+        console.log(story)
+        localStorage.setItem(storyMap.get("Title"), story)
+        console.log(localStorage.getItem(storyMap.get("Title")))
+    }
 
     function initializeText() {
         console.log("Initialize Text")
@@ -162,6 +183,7 @@ export function SubmitStory() {
                 <input type="submit" value="Next" className="btn btn-primary Previous" /> */}
                 <Button className="btn btn-secondary" onClick={() => saveNewValues(cyclePrev)}>Previous</Button>
                 <Button className="btn btn-primary" onClick={() => saveNewValues(cycleNext)}>Next</Button>
+                <Button className="btn btn-success" onClick={() => saveStory()}>Submit</Button>
             </form>
         </div>
     </main>
