@@ -10,9 +10,9 @@ export class Story {
     constructor(Title, Intro, oneA, oneB, twoA, twoB, twoC, twoD, threeA, 
         threeB, threeC, threeD, threeE, threeF, threeG, threeH, fourA, fourB, 
         fourC, fourD, fourE, fourF, fourG, fourH, fourI, fourJ, fourK, fourL, 
-        fourM, fourN, fourO, fourP, storyMap) {
+        fourM, fourN, fourO, fourP) {
         this.Title = Title;
-        this.storyMap = storyMap;
+        this.Intro = Intro;
     
         this.Option4P = new Option(fourP, null, null);
         this.Option4O = new Option(fourO, null, null);

@@ -2,9 +2,11 @@ import React from 'react';
 import './stories.css';
 import { Link } from 'react-router-dom';
 
+import {SubmitStory} from '../SubmitStory/SubmitStory.jsx'
 const myStyle = {}
 
 export function Stories() {
+    const story1 = JSON.parse(localStorage.getItem("title"))
   return (
     <main className="container-fluid">
         <div className="title">
@@ -18,9 +20,9 @@ export function Stories() {
         <div className="stories-container">
             <div className="card">
                 <div className="card-body">
-                    <h5 className="card-title">Story 1</h5>
-                    <p className="card-text">This is a story that has been submitted by a user. It will be a choose your own adventure story that will be created as you go.</p>
-                    <Link to="/ReadStory/Story1" className="btn btn-primary" id="Story1">Begin date!</Link>
+                    <h5 className="card-title">{story1.Title}</h5>
+                    <p className="card-text">{story1.Intro}</p>
+                    <Link to={"/ReadStory/" + story1.Title} className="btn btn-primary" id="Story1">Begin date!</Link>
                 </div>
             </div>
             <div className="card">
