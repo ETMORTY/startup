@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 export function ReadStory() {
     const fullUrl = window.location.href;
     const storyId = fullUrl.substring(fullUrl.lastIndexOf("/") + 1).replace(/%20/g, " ");
-    const story = JSON.parse(localStorage.getItem("Story1")); //Fix later so it isn't hard coded
+    const story = JSON.parse(localStorage.getItem(storyId + "-story")); //Fix later so it isn't hard coded
     
 
     const [selection, setSelection] = React.useState(story.OptionIntro);

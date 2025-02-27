@@ -7,7 +7,6 @@ import {SubmitStory} from '../SubmitStory/SubmitStory.jsx'
 const myStyle = {}
 
 export function Stories() {
-    const story1 = JSON.parse(localStorage.getItem("Story1"))
     const storyList = []
     for (let i = 0; i < localStorage.length; i++) {
         if (localStorage.key(i).includes("-story")) {
@@ -29,13 +28,6 @@ export function Stories() {
         </div>
         <div className="stories-container">
             {storyList.map((element, index) => (< Cards key={index} id={element} />))}
-            <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">{story1.Title}</h5>
-                    <p className="card-text">{story1.Intro}</p>
-                    <Link to={"/ReadStory/" + story1.Title} className="btn btn-primary" id="Story1">Begin date!</Link>
-                </div>
-            </div>
         </div>
         <div className="AddButton">
             <label for="button"><em>Add your own:</em></label>
