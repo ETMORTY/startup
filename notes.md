@@ -168,8 +168,8 @@ const [text, setText] = React.useState(0);
 [x] Save text to variables (maybe a list? or maybe a map?)
 [x] Pass that data into my story class
 [x] Save that story locally
-[] Read that story
-[] Placeholders for API
+[x] Read that story
+[x] Placeholders for API
 [] Scroll in instructions
 [] Styling
 
