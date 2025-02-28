@@ -171,7 +171,7 @@ const [text, setText] = React.useState(0);
 [x] Read that story
 [x] Placeholders for API
 [x] Scroll in instructions
-[] Styling
+[x] Styling
 
 ## Promises
 It is easy to overload the CPU with JavaScript because it is single-threaded (it can only really do one thing at a time)
