@@ -170,7 +170,7 @@ const [text, setText] = React.useState(0);
 [x] Save that story locally
 [x] Read that story
 [x] Placeholders for API
-[] Scroll in instructions
+[x] Scroll in instructions
 [] Styling
 
 ## Promises
