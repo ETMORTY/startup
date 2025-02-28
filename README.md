@@ -97,8 +97,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **All functionality implemented or mocked out** - I did not complete this part of the deliverable.
-- [ ] **Hooks** - I did not complete this part of the deliverable.
+- [x] **All functionality implemented or mocked out** - I got everything to work. I have authentication that only allows you to access certain pages when logged in. I made use of local storage to be able to create a story in the submit story page. It will then create a card for that story on the stories page. Accessing that story, you can read through the different options. I do not have a hardcoded example, so to test it, you will have to create your own basic story. Submitting the story also clears the correct textboxes and allows you to go backward and forward in your story.
+- [x] **Hooks** - These are used throughout my pages, but especially on the submitting story page. I used useState a lot but especially for the titles of the textboxes to change. I also used useEffect to make sure variables were changed before initializing the values in the textbox. I used the same hooks on other pages as well. 
 
 ## 🚀 Service deliverable
 
