@@ -231,3 +231,15 @@ Use this to secure your pages that need authentication (no token)
 - You can't access it unless you have a token
 
 : is a placeholder (then you can pull things from the path to use on the page)
+
+## Authentication
+Consider the implecations of using single sign-on
+- You can use logins from other sources such as google
+- Using their info gives you security in storing the credentials, but it also gives them information from your website since it is their information.
+
+BCrypt for hashing and securely storing passwords
+
+UUID for dandomly creating token
+
+Cookies to store a temporary token
+
