@@ -243,3 +243,6 @@ UUID for dandomly creating token
 
 Cookies to store a temporary token
 
+## Storage
+Amazon has a storage service that we can use to store our files. 
+
