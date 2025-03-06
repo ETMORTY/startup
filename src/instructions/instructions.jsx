@@ -44,7 +44,7 @@ export function Instructions() {
                         <img src="./Envelopes.jpg" alt="Envelope_Idea" width="1000px" />
                         <h4>Here is a map to help you find local restaurant options:</h4>
                         <iframe width="600" height="450" loading="lazy"
-                                src="https://www.google.com/maps/embed/v1/search?q=restaurants&key=AIzaSyCZ2Aypmuwf0fx9NmZKnxfOY1_w81TlN0k">
+                                src="https://www.google.com/maps/embed/v1/search?q=restaurants&key=...">
                         </iframe>
                 <h2>What is this website for?</h2>
                         <p>This website is a place where you can have access to many stories written by others for the purpose of a story date. You
