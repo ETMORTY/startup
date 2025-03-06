@@ -6,8 +6,8 @@ import { AuthState } from '../login/authState';
 export function Instructions() {
         const currentAuthState = localStorage.getItem('userName') ? AuthState.Authenticated : AuthState.Unauthenticated;
         const [authState, setAuthState] = React.useState(currentAuthState);
-        const [map, setMap] = React.useState("https://static1.anpoimages.com/wordpress/wp-content/uploads/2022/07/googleMapsTricksHero.jpg");
         const executeScroll = () => window.scrollTo(0, document.getElementById('adventure').offsetTop);
+
     return (
         <main className="container-fluid">
                 <div className="user">
@@ -42,8 +42,10 @@ export function Instructions() {
                                 </ul>
                         </ol>
                         <img src="./Envelopes.jpg" alt="Envelope_Idea" width="1000px" />
-                        <h4>Here is a map to help you find local options:</h4>
-                        <img src={map} alt="GoogleMaps" width="1000px" />
+                        <h4>Here is a map to help you find local restaurant options:</h4>
+                        <iframe width="600" height="450" loading="lazy"
+                                src="https://www.google.com/maps/embed/v1/search?q=restaurants&key=AIzaSyCZ2Aypmuwf0fx9NmZKnxfOY1_w81TlN0k">
+                        </iframe>
                 <h2>What is this website for?</h2>
                         <p>This website is a place where you can have access to many stories written by others for the purpose of a story date. You
                                  can submit your own as well as collaborate in writing them with others.</p>
