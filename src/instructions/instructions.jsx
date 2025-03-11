@@ -2,8 +2,11 @@ import React from 'react';
 import './instructions.css';
 import { Link, Route } from 'react-router-dom';
 import { AuthState } from '../login/authState';
+import config from '../config.js';
 
 export function Instructions() {
+        const apiKey = config.apiKey;
+        const mapURL = "https://www.google.com/maps/embed/v1/search?q=restaurants&key=" + apiKey;
         const currentAuthState = localStorage.getItem('userName') ? AuthState.Authenticated : AuthState.Unauthenticated;
         const [authState, setAuthState] = React.useState(currentAuthState);
         const executeScroll = () => window.scrollTo(0, document.getElementById('adventure').offsetTop);
@@ -44,7 +47,7 @@ export function Instructions() {
                         <img src="./Envelopes.jpg" alt="Envelope_Idea" width="1000px" />
                         <h4>Here is a map to help you find local restaurant options:</h4>
                         <iframe width="600" height="450" loading="lazy"
-                                src="https://www.google.com/maps/embed/v1/search?q=restaurants&key=...">
+                                src={mapURL}>
                         </iframe>
                 <h2>What is this website for?</h2>
                         <p>This website is a place where you can have access to many stories written by others for the purpose of a story date. You

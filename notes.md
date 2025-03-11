@@ -246,3 +246,7 @@ Cookies to store a temporary token
 ## Storage
 Amazon has a storage service that we can use to store our files. 
 
+## Mongo DB
+Collection of schema free JSON
+
+It automatically creates an ID for each item
