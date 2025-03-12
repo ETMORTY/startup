@@ -4,6 +4,8 @@ const bcrypt = require('bcryptjs');
 const uuid = require('uuid');
 const app = express();
 
+const authCookieName = 'token';
+
 let users = [];
 let stories = [];
 
@@ -11,9 +13,9 @@ const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static('public'));
 
-
-let apiRouter = express.Router();
+var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
 apiRouter.post('/auth/create', async (req, res) => {
@@ -63,12 +65,7 @@ apiRouter.get('/stories', verifyAuth, async (req, res) => {
 });
 
 apiRouter.post('/story/create', verifyAuth, async (req, res) => {
-    const story = {
-    intro: req.body.intro,
-    title: req.body.title,
-    content: req.body.content,
-    }
-    stories.push(story);
+    story = addStory(req.body.intro, req.body.title, req.body.content);
     res.send(story);
 }
 );
@@ -82,7 +79,16 @@ res.sendFile('index.html', { root: 'public' });
 });
   
 
+function addStory(intro, title, content) {
+    const story = {
+        intro: intro,
+        title: title,
+        content: content,
+    };
+    stories.push(story);
 
+    return story;
+}
 
 async function createUser(email, password) {
     const passwordHash = await bcrypt.hash(password, 10);
