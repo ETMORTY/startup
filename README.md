@@ -104,11 +104,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Node.js/Express HTTP service** - I did not complete this part of the deliverable.
-- [ ] **Static middleware for frontend** - I did not complete this part of the deliverable.
-- [ ] **Calls to third party endpoints** - I did not complete this part of the deliverable.
-- [ ] **Backend service endpoints** - I did not complete this part of the deliverable.
-- [ ] **Frontend calls service endpoints** - I did not complete this part of the deliverable.
+- [x] **Node.js/Express HTTP service** - Done! 
+- [x] **Static middleware for frontend** - Done!
+- [x] **Calls to third party endpoints** - On the intructions page, I make a call to google to get a map API that the user can interact with. It is not a usual fetch request but is in iframe element instead.
+- [x] **Backend service endpoints** - I have a list that stores my stories and another one to store users. The endpoints add to and send these lists. 
+- [x] **Frontend calls service endpoints** - I call these endpoints for logins and on the submit story page when I submit a story. I also have one to get the stories on the stories page. Both were done using fetch requests.
+- [x] **Supports registration, login, logout, and restricted endpoint** - It saves the users to a list and will let you know if a user already exists. It will then check your password. The stories, submit story, and read story pages are all restricted by cookies. 
 
 ## 🚀 DB/Login deliverable
 
