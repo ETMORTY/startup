@@ -14,7 +14,13 @@ export function Stories() {
             .then((response) => response.json())
             .then((stories) => {
                 setStories(JSON.parse(JSON.stringify(stories)));
+                for (let i = 0; i < stories.length; i++) {
+                    let story = JSON.parse(stories[i])
+                    console.log("Title:" + story.Title)
+                    localStorage.setItem(story.Title, JSON.stringify(story))
+                }
             });
+        
     }, []);
     console.log("Story List:" + stories)
         
