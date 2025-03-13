@@ -239,7 +239,7 @@ Consider the implecations of using single sign-on
 
 BCrypt for hashing and securely storing passwords
 
-UUID for dandomly creating token
+UUID for randomly creating token
 
 Cookies to store a temporary token
 
@@ -250,3 +250,6 @@ Amazon has a storage service that we can use to store our files.
 Collection of schema free JSON
 
 It automatically creates an ID for each item
+
+Your service directory is a separate program essentially (It has its own dependencies)
+
