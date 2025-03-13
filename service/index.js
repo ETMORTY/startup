@@ -8,7 +8,6 @@ const authCookieName = 'token';
 
 let users = [];
 let stories = [];
-// let storiesMap = new Map()
 
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
 
@@ -62,10 +61,6 @@ const verifyAuth = async (req, res, next) => {
   };
 
 apiRouter.get('/stories', verifyAuth, async (req, res) => {
-    // for (let i = 0; i < stories.length; i++) {
-    //   let story = JSON.stringify(stories[i])
-    //   localStorage.setItem(story.Title, story)
-    // }
     res.send(stories);
 });
 
@@ -74,15 +69,6 @@ apiRouter.post('/story/create', verifyAuth, async (req, res) => {
     res.send(story);
 }
 );
-
-app.get('/api/story/:id', verifyAuth, async (req, res) => {
-    const story = stories.find((s) => req.params.id);
-    if (story) {
-      res.send(story);
-    } else {
-      res.status(404).send({ msg: 'Story not found' });
-    }
-  });
 
 app.use(function (err, req, res, next) {
     res.status(500).send({ type: err.name, message: err.message });
@@ -94,13 +80,10 @@ res.sendFile('index.html', { root: 'public' });
   
 
 function addStory(body) {
-    // let title = body.Title
     const story = JSON.stringify(body)
     console.log("Story:" + story);
     stories.push(story);
-    // storiesMap.set(title, body)
     console.log(stories);
-    // console.log("Map: " + storiesMap)
     return stories;
 }
 
