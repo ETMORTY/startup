@@ -7,14 +7,16 @@ import {SubmitStory} from '../SubmitStory/SubmitStory.jsx'
 const myStyle = {}
 
 export function Stories() {
-    const storyList = []
-    for (let i = 0; i < localStorage.length; i++) {
-        if (localStorage.key(i).includes("-story")) {
-            console.log(localStorage.key(i))
-            storyList.push(i)
-        }
-    }
-    console.log("Story List:" + storyList)
+    const [stories, setStories] = React.useState([]);
+
+    React.useEffect(() => {
+        fetch('/api/stories')
+            .then((response) => response.json())
+            .then((stories) => {
+                setStories(JSON.parse(JSON.stringify(stories)));
+            });
+    }, []);
+    console.log("Story List:" + stories)
         
   return (
     <main className="container-fluid">
@@ -27,7 +29,7 @@ export function Stories() {
             <p><em>A catalog of stories to select from</em></p>
         </div>
         <div className="stories-container">
-            {storyList.map((element, index) => (< Cards key={index} id={element} />))}
+            {stories.map((element, index) => (< Cards key={index} id={element} />))}
         </div>
         <div className="AddButton">
             <label for="button"><em>Add your own:</em></label>

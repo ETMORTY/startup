@@ -37,12 +37,9 @@ export function SubmitStory() {
     const [option3Value, setOption3Value] = useState("")
     const [option4Value, setOption4Value] = useState("Sample Text")
 
-    function saveStory() {
+    async function saveStory() {
         console.log("Save Story")
-        console.log(storyMap)
-        const arr = Array.from(storyMap)
-        localStorage.setItem(storyMap.get("Title") + "-map", JSON.stringify(arr))
-        console.log(localStorage.getItem(storyMap.get("Title") + "-map"))
+        
         const story = new Story(storyMap.get("Title"), storyMap.get("Intro"), storyMap.get("1A"), 
             storyMap.get("1B"), storyMap.get("2A"), storyMap.get("2B"), storyMap.get("2C"), 
             storyMap.get("2D"), storyMap.get("3A"), storyMap.get("3B"), storyMap.get("3C"), 
@@ -52,9 +49,17 @@ export function SubmitStory() {
             storyMap.get("4H"), storyMap.get("4I"), storyMap.get("4J"), storyMap.get("4K"), 
             storyMap.get("4L"), storyMap.get("4M"), storyMap.get("4N"), storyMap.get("4O"), 
             storyMap.get("4P"))
-        console.log(story)
-        localStorage.setItem(storyMap.get("Title") + '-story', JSON.stringify(story))
-        console.log(localStorage.getItem("Story1"))
+
+        await fetch('/api/story/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(story),
+        })
+        console.log(JSON.stringify(story))
+        console.log(JSON.parse(JSON.stringify(story)))
+
     }
 
     function initializeText() {

@@ -2,13 +2,21 @@ import React from 'react';
 import './ReadStory.css';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/esm/Button';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 
 export function ReadStory() {
     const fullUrl = window.location.href;
     const storyId = fullUrl.substring(fullUrl.lastIndexOf("/") + 1).replace(/%20/g, " ");
-    const story = JSON.parse(localStorage.getItem(storyId + "-story")); //Fix later so it isn't hard coded
-    
+    const [story, setStory] = React.useState({});
+
+    React.useEffect(() => {
+        fetch('/api/story/' + storyId)
+            .then((response) => response.json())
+            .then((story) => {
+                setStory(JSON.parse(JSON.stringify(story)));
+            });
+    }, []);
+    console.log("Story:" + story);
 
     const [selection, setSelection] = React.useState(story.OptionIntro);
     const [option1, setOption1] = React.useState(selection.next1.text);

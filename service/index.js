@@ -60,15 +60,24 @@ const verifyAuth = async (req, res, next) => {
     }
   };
 
-apiRouter.get('/stories', verifyAuth, async (req, res) => {
+apiRouter.get('/stories', async (req, res) => {
     res.send(stories);
 });
 
-apiRouter.post('/story/create', verifyAuth, async (req, res) => {
-    story = addStory(req.body.intro, req.body.title, req.body.content);
+apiRouter.post('/story/create', async (req, res) => {
+    story = addStory(req.body);
     res.send(story);
 }
 );
+
+app.get('/api/story/:id', async (req, res) => {
+    const story = stories.find((s) => s[req.params.id]);
+    if (story) {
+      res.send(story);
+    } else {
+      res.status(404).send({ msg: 'Story not found' });
+    }
+  });
 
 app.use(function (err, req, res, next) {
     res.status(500).send({ type: err.name, message: err.message });
@@ -79,15 +88,12 @@ res.sendFile('index.html', { root: 'public' });
 });
   
 
-function addStory(intro, title, content) {
-    const story = {
-        intro: intro,
-        title: title,
-        content: content,
-    };
+function addStory(body) {
+    const story = JSON.stringify(body)
+    console.log("Story:" + story);
     stories.push(story);
-
-    return story;
+    console.log(stories);
+    return stories;
 }
 
 async function createUser(email, password) {
