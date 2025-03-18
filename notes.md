@@ -253,3 +253,7 @@ It automatically creates an ID for each item
 
 Your service directory is a separate program essentially (It has its own dependencies)
 
+## Testing
+To test the endpoints, you don't need to launch a server. You can separate parts of the code to test those specific parts. Separate the server startup from acually creating the endpoints. 
+
+Write tests first and code to work with it.
