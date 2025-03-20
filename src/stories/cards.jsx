@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './stories.css';
 
 export function Cards(id) {
-    const story = JSON.parse(id.id);
+    const story = id.id;
             return (
                 <div className="card">
                     <div className="card-body">

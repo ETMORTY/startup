@@ -15,7 +15,7 @@ export function Stories() {
             .then((stories) => {
                 setStories(JSON.parse(JSON.stringify(stories)));
                 for (let i = 0; i < stories.length; i++) {
-                    let story = JSON.parse(stories[i])
+                    let story = stories[i]
                     console.log("Title:" + story.Title)
                     localStorage.setItem(story.Title, JSON.stringify(story))
                 }
