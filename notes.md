@@ -257,3 +257,10 @@ Your service directory is a separate program essentially (It has its own depende
 To test the endpoints, you don't need to launch a server. You can separate parts of the code to test those specific parts. Separate the server startup from acually creating the endpoints. 
 
 Write tests first and code to work with it.
+
+## WebSocket
+Bidirectional communication
+
+The live server is a WebSocket protocol. Anytime something would change, the server would tell the page to refresh because there is more code. 
+
+We make a server that will only look for an upgrade to websocket because that is what it needs to communicate.
