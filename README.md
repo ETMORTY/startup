@@ -115,11 +115,12 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **User registration** - I did not complete this part of the deliverable.
-- [ ] **User login and logout** - I did not complete this part of the deliverable.
-- [ ] **Stores data in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Stores credentials in MongoDB** - I did not complete this part of the deliverable.
-- [ ] **Restricts functionality based on authentication** - I did not complete this part of the deliverable.
+- [x] **User registration** - User email and password are stored in the database.
+- [x] **User login and logout** - When a user logs in, the data is stored and a token is created. When you logout, the token is deleted. 
+- [x] **Stores data in MongoDB** - Both user data and the stories are stored in the database. 
+- [x] **Stores credentials in MongoDB** - Credentials are stored under the Users tab in MongoDB.
+- [x] **Restricts functionality based on authentication** - A token is required to submit stories and read stories. 
+- [x] **Calls to third party endpoints** - I added an API call on the login page after you are logged in. A picture will appear on the logged in screen. It usually takes a little bit for it to load. 
 
 ## 🚀 WebSocket deliverable
 
