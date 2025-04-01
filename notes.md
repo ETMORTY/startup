@@ -264,3 +264,41 @@ Bidirectional communication
 The live server is a WebSocket protocol. Anytime something would change, the server would tell the page to refresh because there is more code. 
 
 We make a server that will only look for an upgrade to websocket because that is what it needs to communicate.
+
+## Security
+1. Broken Access Control
+  - * Allowing people to access things that shouldn't be accessed because of their roles (no authorization)
+2. Cryptographic Failures
+  - * No encrypting, weak encrypting, or misuse of encrypting
+3. Injection
+  - * When a user inputs data, they input code that will then be executed on the server or others computers
+  - * You need to make sure that you sanitize these (Don't execute code that comes in)
+4. Insecure Design
+  - * Not aware of best practices
+  - * Unlimited trial accounts (no cost to the user, so they can make as many requests as they want to take down the server)
+  - * All data in one database (Performance problems, easy to overload, only have to get into that one database)
+  - * Single layer defense
+5. Security Misconfiguration
+  - * Development information exposed (console log parts of your code)
+  - * Using default configuration (Username: admin, password: admin)
+  - * Unnecessary features installed
+6. Vulnerable Components
+  - * Unnecessary/unused packages imported
+  - * Untrusted/verified sources
+  - * Out of date software
+  - * Not tracking vulnerability bulletins (know when to update)
+  - * Packager versions not locked
+7. ID and Auth Failures
+  - * Allow weak password
+  - * Weak password recovery
+  - * Credentials in the url
+  - * Not expiring auth tokens
+8. Software Integrity Failures
+  - * Trusting or relying on other software
+9. Logging Failures
+  - * Not logging critical requests
+  - * No performance monitoring
+  - * Not looking at the logs
+  - * No quick response
+10. Server Side Request Forgery
+  - * Data given by customer is a url (no sanitization)
