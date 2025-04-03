@@ -11,6 +11,8 @@ export function ReadStory() {
 
     const [selection, setSelection] = React.useState(story.OptionIntro);
     const [option1, setOption1] = React.useState(selection.next1.text);
+    const [option1Label, setOption1Label] = React.useState(selection.next1.option);
+    const [option2Label, setOption2Label] = React.useState(selection.next2.option);
     const [option2, setOption2] = React.useState(selection.next2.text);
     const [storyText, setStoryText] = React.useState(story.Intro);
     const [counter, setCounter] = React.useState(0);
@@ -50,6 +52,8 @@ export function ReadStory() {
     useEffect(() => {
         setOption1(option1 ? selection?.next1.text : "You finished the story!");
         setOption2(option2 ? selection?.next2.text : "You finished the story!");
+        setOption1Label(selection?.next1.option);
+        setOption2Label(selection?.next2.option);
     }, [selection]);
 
   return (
@@ -65,9 +69,9 @@ export function ReadStory() {
         <form>
             <div className="options">
                 <input type="radio" id="Option1" value={option1} name="StoryOptions" />
-                <label htmlFor="Option1"><strong>{counter + 1}A</strong> {option1}</label><br />
+                <label htmlFor="Option1"><strong>{option1Label}</strong> {option1}</label><br />
                 <input type="radio" id="Option2" value={option2} name="StoryOptions" />
-                <label htmlFor="Option2"><strong>{counter + 1}B</strong> {option2}</label><br />
+                <label htmlFor="Option2"><strong>{option2Label}</strong> {option2}</label><br />
             </div>
             <Button className="btn btn-primary" id="submit" onClick={() => [addSelection(), count()] }>Submit</Button>
         </form>
