@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { submissionNotifier, storyEvent } from './submissionNotifier.js';
+import './notifications.css';
 
 export function Notifications(props) {
   const userName = props.userName;
@@ -41,7 +42,7 @@ export function Notifications(props) {
 
   return (
     <div className='user'>
-      <div id='player-messages'>{createMessageArray()}</div>
+      <div id='user-messages'>{createMessageArray()}</div>
     </div>
   );
 }
