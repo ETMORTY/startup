@@ -302,3 +302,5 @@ We make a server that will only look for an upgrade to websocket because that is
   - * No quick response
 10. Server Side Request Forgery
   - * Data given by customer is a url (no sanitization)
+
+Attempting to break your code or website is a good way to understand and prepare for attacks from others.
