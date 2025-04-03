@@ -34,4 +34,4 @@ function peerProxy(httpServer) {
 }
 
 module.exports = { peerProxy };
-// I altered the code from simon-websocket/service/index.js: to send the message to everyon including the sender.
+// I altered the code from simon-websocket/service/index.js: to send the message to everyone including the sender.

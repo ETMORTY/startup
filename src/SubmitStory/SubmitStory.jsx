@@ -3,6 +3,8 @@ import './SubmitStory.css';
 import { Link } from 'react-router-dom';
 import Button from "react-bootstrap/Button";
 import { Story } from '../SubmitStory/story.js';
+import { submissionNotifier, storyEvent } from './submissionNotifier.js';
+import { Notifications } from './Notifications.jsx';
 
 
 export function SubmitStory() {
@@ -59,7 +61,7 @@ export function SubmitStory() {
         })
         console.log(JSON.stringify(story))
         console.log(JSON.parse(JSON.stringify(story)))
-
+        submissionNotifier.broadcastEvent(localStorage.userName, storyEvent.Submit, {});
     }
 
     function initializeText() {
@@ -166,6 +168,7 @@ export function SubmitStory() {
         </div>
         <div className="text-container">
             <p><em>Submit a story for others to enjoy</em></p>
+            <Notifications userName={localStorage.userName} />
             <form action="SubmitStory.html" method="get">
                 <label for="Title">Title: </label>
                     <input type="text" className="textBoxes title" name="Title" /><br />
