@@ -126,8 +126,8 @@ For this deliverable I did the following. I checked the box `[x]` and added a de
 
 For this deliverable I did the following. I checked the box `[x]` and added a description for things I completed.
 
-- [ ] **Backend listens for WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Frontend makes WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **Data sent over WebSocket connection** - I did not complete this part of the deliverable.
-- [ ] **WebSocket data displayed** - I did not complete this part of the deliverable.
-- [ ] **Application is fully functional** - I did not complete this part of the deliverable.
+- [x] **Backend listens for WebSocket connection** - Done!
+- [x] **Frontend makes WebSocket connection** - Done!
+- [x] **Data sent over WebSocket connection** - Done!
+- [x] **WebSocket data displayed** - The websocket data comes as a notification on the top right of the screen on the Submit Story page. It appears whenever the user or another user submits a story. 
+- [x] **Application is fully functional** - Done! I'm really happy with how everything turned out. It actually works pretty well for what I wanted it to do. There are some features I wish I still could have added, but that would have made it way more complicated. 
